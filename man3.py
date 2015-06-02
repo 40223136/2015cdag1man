@@ -19,7 +19,7 @@ class MAN(object):
         outstring = '''
 這是 2014CDA 協同專案下的 cdag30 模組下的 MAN 類別.<br /><br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
-<a href="assembly">man褲子+腳-黃金振</a><br /><br />
+<a href="assembly">褲子-黃金振</a><br /><br />
 請確定下列零件於 V:/home/lego/man 目錄中, 且開啟空白 Creo 組立檔案.<br />
 <a href="/static/lego_man.7z">lego_man.7z</a>(滑鼠右鍵存成 .7z 檔案)<br />
 '''
@@ -246,12 +246,7 @@ var assembly = model;
 // Body 組立面為 DTM4, DTM5, DTM6
 // WAIST 組立面為 DTM1, DTM2, DTM3, 組立增量次序為 6, 與 body 採三面 mate 組立
 three_plane_assembly2(session, assembly, transf, 40, 0, "LEGO_WAIST.prt", "DTM4", "DTM5", "DTM6", "DTM1", "DTM2", "DTM3"); 
-// 右腳
-axis_plane_assembly(session, assembly, transf, 40, 5, 
-                              "LEGO_LEG_RT.prt", "A_8", "DTM4", "A_10", "DTM1");
-// 左腳
-axis_plane_assembly(session, assembly, transf, 40, 5, 
-                              "LEGO_LEG_LT.prt", "A_8", "DTM5", "A_10", "DTM1");                                                  
+
 // regenerate 並且 repaint 組立檔案
 assembly.Regenerate (void null);
 session.GetModelWindow (assembly).Repaint();    
